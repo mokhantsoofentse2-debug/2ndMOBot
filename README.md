@@ -1,3 +1,11 @@
+# For App Router (Next.js 13+)
+mkdir app
+touch app/page.js
+touch app/layout.js
+
+# For Pages Router
+mkdir pages
+touch pages/index.js
 # M.O. Trading Bot Dashboard - Starter (Next.js)
 
 This repo contains a Next.js starter app and minimal API routes to run the remote dashboard + MT5 bridge.
