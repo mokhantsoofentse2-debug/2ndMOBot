@@ -1,0 +1,20 @@
+// Prisma schema placeholder. Replace datasource URL with your Postgres connection string.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Setting {
+  id               Int     @id @default(autoincrement())
+  enabled          Boolean @default(false)
+  dailyTradeLimit  Int     @default(10)
+  broker           String?
+  accountId        String?
+  todayTrades      Int     @default(0)
+  lifetimeTrades   Int     @default(0)
+  createdAt        DateTime @default(now())
+}
